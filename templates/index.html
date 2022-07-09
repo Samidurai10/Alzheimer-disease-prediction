@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alzheimer disease</title>
+    <link rel="stylesheet" href="/static/style.css" type="text/css" >
+
+
+</head>
+<body>
+    <h1>Alzheimer Disease</h1>
+    <div class="login">
+
+        <br>
+        <form action="{{url_for('predict')}}" method="POST">
+            <h4>Mini Mental State Examination</h4>
+            <input type="text" name="MMSE" placeholder="MMSE" size="30px" required="required"/>
+            <br>
+            <h4>Clinical Dementia Rating</h4>
+            <input type="text" name="CDR" placeholder="CDR" size="30px" required="required"/>
+            <br>
+            <br>
+            <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+
+        </form>
+        <br>
+        <h3>{{ prediction_text }}</h3>
+
+
+    </div>
+   
+    
+</body>
+</html>
